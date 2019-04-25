@@ -1,0 +1,32 @@
+main > span[class=required]{
+    color: red;
+}
+
+li{
+    border:solid 1px gray;
+    width: 15%;   
+}
+
+header{
+    text-align: center;
+    background-color: rgb(126, 13, 126);
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+    border-width: 1px;
+    border-style: solid;
+    border-color: darkgreen;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1.5em;
+}
+
+main > label{
+    margin-right: 2em;
+    text-align: right;
+    width: 12;
+    display: inline-block;
+}
+main > input[type = text]{
+    padding : .4em;
+    border-radius: .5em;
+}
