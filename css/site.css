@@ -30,3 +30,17 @@ main > input[type = text]{
     padding : .4em;
     border-radius: .5em;
 }
+
+body{
+    margin: .75em 10%;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        margin: 0px 3%;
+    }
+
+    header{
+        font-family: 'Courier New', Courier, monospace
+    }
+}

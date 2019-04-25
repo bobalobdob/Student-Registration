@@ -12,8 +12,24 @@ window.onload = function () {
     regBtn.onclick = registerStudent;
 };
 function registerStudent() {
-    var nextStudent = getStudent();
-    displayStudent(nextStudent);
+    if (isValid()) {
+        var nextStudent = getStudent();
+        displayStudent(nextStudent);
+    }
+}
+function isValid() {
+    var requiredElems = document.querySelectorAll("main > input[data-required]");
+    var valid = true;
+    for (var i = 0; i < requiredElems.length; i++) {
+        var currInput = requiredElems[i];
+        if (currInput.value == "") {
+            var span = currInput.nextElementSibling;
+            var msg = span.getAttribute("data-msg");
+            span.innerHTML = msg;
+            valid = false;
+        }
+    }
+    return valid;
 }
 function getStudent() {
     var s = new Student();
